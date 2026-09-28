@@ -1,0 +1,42 @@
+﻿<ContentPage x:Class="CodigoQR.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+            <Label
+                Text="Generador de QR"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+                x:Name= "EnlaceEntry"
+                Placeholder= "Ingresa el enlace: "
+                />
+
+            <Button
+                Text= "Generar QR"
+                Clicked="OnGenerarQRClicked" />
+            
+            <Image
+                x:Name= "QrImage"
+                HeightRequest= "250"
+                WidthRequest = "250"
+                Aspect="AspectFit" />
+            <Button
+                x:Name="GuardarBtn"
+                Text="Guardar QR"
+                IsEnabled= "False"
+                Clicked="OnGuardarQRClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
